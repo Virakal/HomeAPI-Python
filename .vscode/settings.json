@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "C:/Users/jonno/.virtualenvs/homeapi-python/bin/python.exe",
+    "python.formatting.provider": "black"
+}
