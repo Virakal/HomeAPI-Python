@@ -7,7 +7,7 @@ class Client:
     _lights = {}
 
     def __init__(self, endpoint='https://localhost:44380', verify_ssl=False):
-        self.endpoint = endpoint
+        self.endpoint = endpoint.rstrip('/')
         self.verify_ssl = verify_ssl
 
         if not verify_ssl:
