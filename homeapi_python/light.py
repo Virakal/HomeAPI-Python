@@ -4,7 +4,7 @@ class Light:
         self.id = data['id']
         self.name = data['name']
         self._brightness = float(data['brightnessPercentage'])
-        self.is_on = data['isOn']
+        self._is_on = data['isOn']
         self.is_reachable = data['isReachable']
 
         self._current_state = {
@@ -40,3 +40,12 @@ class Light:
 
         self._set_state(Brightness=brightness)
         self._brightness = brightness_percentage
+
+    @property
+    def is_on(self):
+        return self._is_on
+
+    @is_on.setter
+    def is_on(self, value=True):
+        self._set_state(PowerState=value)
+        self._is_on = value
